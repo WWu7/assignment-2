@@ -11,14 +11,26 @@ import path, {dirname} from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+//import mongoose mondule
+import mongoose from 'mongoose';
+
 // Configuration Module
-import { Secret } from "../config/config.js";
+import { MongoURI, Secret } from "../config/config.js";
 
 // Import Router
 import indexRouter from './routes/index.route.server.js';
+import { waitForDebugger } from "inspector";
 
 // instantiate app-server
 const app = express();
+
+// Complete DB config
+mongoose.connect(MongoURI);
+const db = mongoose.connection;
+
+// listen for connection success or error
+db.on('open', ()=> console.log("Connected to MonogDB"));
+db.on('error', () => console.log("Mongo connection error"));
 
 // setup ViewEngine EJS
 app.set('views', path.join(__dirname,'/views'));
