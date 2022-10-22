@@ -23,11 +23,11 @@
                     <% for(let count = 0; count < movies.length; count++) { %>
                         <tr>
                             <th scope="row" class="text-center"><%= count + 1 %></th>
-                            <td><%= movies[count].name %></td>
-                            <td><%= movies[count].year %></td>
-                            <td><%= movies[count].director %></td>
-                            <td><%= movies[count].genre %></td>
-                            <td><%= movies[count].runtime %></td>
+                            <td><%= Movies[count].name %></td>
+                            <td><%= Movies[count].year %></td>
+                            <td><%= Movies[count].director %></td>
+                            <td><%= Movies[count].genre %></td>
+                            <td><%= Movies[count].runtime %></td>
                             
                             <td class="text-center col-1">
                                 <a href="/movie-edit/<%= movies[count]._id %>"

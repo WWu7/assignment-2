@@ -4,14 +4,14 @@
             <h1><%= title %></h1>
 
             <form class="form" method="POST">
-                <input type="hidden" name="id" value="<%= movie._id %>" >
+                <input type="hidden" name="id" value="<%= Movies._id %>" >
                 <div class="form-group">
                     <label for="nameTextField">Movie Title</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
                     placeholder="Enter the Movie Title"
                     name="name" 
-                    value="<%= movie.name %>"
+                    value="<%= Movies.name %>"
                     required>
                 </div>
 
@@ -21,7 +21,7 @@
                     id="authorTextField"
                     placeholder="Enter the Release Year"
                     name="year" 
-                    value="<%= movie.year %>"
+                    value="<%= Movies.year %>"
                     required>
                 </div>
 
@@ -31,7 +31,7 @@
                     id="publishedTextField"
                     placeholder="Enter the Director's Name"
                     name="director" 
-                    value="<%= movie.director %>"
+                    value="<%= Movies.director %>"
                     required>
                 </div>
 
@@ -41,7 +41,7 @@
                     id="descriptionTextArea"
                     placeholder="Enter the Movie genre"
                     name="genre"                     
-                    value="<%= movie.genre %>"
+                    value="<%= Movies.genre %>"
                     required
                     >
                     </input>
@@ -53,7 +53,7 @@
                     id="priceTextField"
                     placeholder="Enter the Movie's Runtime in Minutes"
                     name="runtime" 
-                    value="<%= movie.runtime %>"
+                    value="<%= Movies.runtime %>"
                     required>
                 </div>
 
